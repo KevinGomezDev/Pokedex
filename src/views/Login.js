@@ -46,7 +46,7 @@ class Login extends React.Component {
         ? 'is-success' 
         : 'is-error' 
       : '';
-    return <React.Fragment>
+    return <div>
       <h1>Login</h1>
       <form onSubmit={this.handleSubmit}>
       <div className="nes-field">
@@ -62,7 +62,7 @@ class Login extends React.Component {
         <Link className="nes-btn" to='/sign-up'>Sign-up</Link>
       </div>
       </form>
-    </React.Fragment>
+    </div>
   }
 }
 

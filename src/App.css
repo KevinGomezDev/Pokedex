@@ -40,6 +40,27 @@
   height: 50%;
 }
 
+.pokemon {
+  border: 1px solid #ecf0f1;
+  height: 200px;
+  padding: 0;
+  text-align: center;
+  list-style: none;
+  width: 33.33%;
+}
+
+.poke-list {
+  display: flex;
+  flex-wrap: wrap;
+  height: 90%;
+  overflow-y: scroll;
+  width: 100%;
+}
+
+.search-container {
+  width: 100%;
+}
+
 .button-container {
   display: flex;
   margin-top: 2em;

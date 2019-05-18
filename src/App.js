@@ -1,9 +1,12 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+
 import './App.css';
 import 'nes.css/scss/nes.scss';
-import Login from './views/Login'
-import SignUp from './views/SignUp'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+
+import Home from './views/Home';
+import Login from './views/Login';
+import SignUp from './views/SignUp';
 
 function App() {
   return <Router> 
@@ -28,6 +31,7 @@ function App() {
         <div className='pokedex-controls'>Controls</div>
       </div>
       <div className='pokedex-content'>
+      <Route exact path="/" component={Home} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/sign-up" component={SignUp} />
       </div>

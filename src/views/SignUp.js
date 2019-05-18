@@ -60,7 +60,7 @@ class SignUp extends React.Component {
         ? 'is-success' 
         : 'is-error' 
       : '';
-    return <React.Fragment>
+    return <div>
       <h1>Sign Up</h1>
       <form onSubmit={this.handleSubmit}>
       <div className="nes-field">
@@ -84,7 +84,7 @@ class SignUp extends React.Component {
         <Link className="nes-btn" to='/login'>Cancel</Link>
       </div>
       </form>
-    </React.Fragment>
+    </div>
   }
 }
 
