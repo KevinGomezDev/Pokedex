@@ -1,6 +1,8 @@
 import React from 'react';
-import USERS from '../data/users'
-import { validateEmail } from '../utils/validators'
+import { Link } from 'react-router-dom';
+
+import { validateEmail } from '../utils/validators';
+import USERS from '../data/users';
 
 class Login extends React.Component {
   state = {
@@ -57,7 +59,7 @@ class Login extends React.Component {
       </div>
       <div className='button-container'>
         <button type="submit" disabled={!isValidEmail} className={`nes-btn ${isValidEmail ? 'is-primary' : 'is-disabled'}`}>Login</button>
-        <button className="nes-btn">Register</button>
+        <Link className="nes-btn" to='/sign-up'>Sign-up</Link>
       </div>
       </form>
     </React.Fragment>
