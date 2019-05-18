@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import 'nes.css/scss/nes.scss';
 import Login from './views/Login'
+import SignUp from './views/SignUp'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
             <Link to="/login">Login</Link>
           </li>
           <li>
-            <Link to="/sign-up">Sign Up</Link>
+            <Link to="/sign-up">Sign-Up</Link>
           </li>
           <li>
             <Link to="/pokemon">Pokemon</Link>
@@ -27,7 +28,8 @@ function App() {
         <div className='pokedex-controls'>Controls</div>
       </div>
       <div className='pokedex-content'>
-        <Route exact path="/Login" component={Login} />
+        <Route exact path="/login" component={Login} />
+        <Route exact path="/sign-up" component={SignUp} />
       </div>
   </div>
   </Router>
