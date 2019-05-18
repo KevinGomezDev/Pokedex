@@ -1,6 +1,5 @@
 import React from 'react';
-
-function Pokemon ({ name }) {
+function Pokemon ({ id, name }) {
   return <ul className='pokemon'>
     <li>
       <span>{name}</span>
@@ -10,7 +9,7 @@ function Pokemon ({ name }) {
 
 function PokemonList (props) {
   return <div className='poke-list'>
-    {props.pokemons.map((pokemon) => <Pokemon key={pokemon.name} name={pokemon.name} />)}
+    {props.pokemons.map((pokemon) => <Pokemon key={pokemon.id} id={pokemon.id} name={pokemon.name} />)}
   </div>
 }
 
