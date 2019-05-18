@@ -49,6 +49,15 @@
   width: 33.33%;
 }
 
+.pokemon li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
 .poke-list {
   display: flex;
   flex-wrap: wrap;

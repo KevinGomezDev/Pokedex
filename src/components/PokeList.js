@@ -1,11 +1,5 @@
 import React from 'react';
-function Pokemon ({ id, name }) {
-  return <ul className='pokemon'>
-    <li>
-      <span>{name}</span>
-    </li>
-  </ul>
-}
+import Pokemon from '../components/Pokemon'
 
 function PokemonList (props) {
   return <div className='poke-list'>
