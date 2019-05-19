@@ -21,9 +21,10 @@ const catchPokemons = (error) => ({
 
 export const fetchPokemons = () => (dispatch) => {
     dispatch(requestPokemons());
-      getPokemons()
-        .then(pokemons => dispatch(receivePokemons(pokemons)))
-        .catch(err => dispatch(catchPokemons(err)));
+    getPokemons()
+    .then((data) => Promise.all(data.results.map((item) => getPokemon(item.name))))
+    .then((result) => dispatch(receivePokemons(result)))
+    .catch((err) => dispatch(catchPokemons(err)));
 };
 
 const requestPokemon = (pokemonId) => ({

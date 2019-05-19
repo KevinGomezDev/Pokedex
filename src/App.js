@@ -7,7 +7,7 @@ import initialState from './reducers/initialState';
 import './App.css';
 import 'nes.css/scss/nes.scss';
 
-import Home from './views/Home';
+import Home from './containers/Home';
 import Login from './views/Login';
 import Pokemon from './views/Pokemon';
 import SignUp from './views/SignUp';
@@ -29,9 +29,6 @@ function App() {
           </li>
           <li>
             <NavLink to="/sign-up">Sign-Up</NavLink>
-          </li>
-          <li>
-            <NavLink to="/pokemon">Pokemon</NavLink>
           </li>
         </ul>
         </div>

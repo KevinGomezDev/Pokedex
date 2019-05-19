@@ -1,27 +1,25 @@
 import React from 'react';
 
-import { getPokemons, getPokemon } from '../data/api'
-
 import PokemonList from '../components/PokemonList';
 import SearchBar from '../components/SearchBar';
 
 class Home extends React.Component {
-  state = {
-    pokemons: [],
-  }
-  
   componentDidMount() {
-    getPokemons().then((data) =>
-      Promise.all(data.results.map(item => getPokemon(item.name)))
-      .then(result => this.setState({ pokemons: result }))
-    ).catch((error) => console.log(error))
+    const { fetchPokemons, pokemons } = this.props
+    if (pokemons.data.length === 0) {
+      fetchPokemons();
+    }
   }
 
   render() {
-    return <React.Fragment>
-      <PokemonList pokemons={this.state.pokemons} />
-      <SearchBar />
-    </React.Fragment>
+    const { pokemons } = this.props
+    const pokemonsExist = !!pokemons && (pokemons.data.length > 0)
+    return pokemonsExist 
+      ? <React.Fragment>
+        <PokemonList pokemons={pokemons.data} />
+        <SearchBar />
+      </React.Fragment>
+    : <i className="nes-octocat animate"></i>
   }
 }
 
