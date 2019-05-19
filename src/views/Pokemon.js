@@ -1,8 +1,8 @@
 import React from 'react'
 import { getPokemon } from '../data/api'
 
-import PokemonThumb from '../components/PokemonThumb'
-import PokemonDetail from '../components/PokemonDetail'
+import PokemonThumb from '../components/PokemonThumb/PokemonThumb'
+import PokemonDetail from '../components/PokemonDetail/PokemonDetail'
 
 class Pokemon extends React.Component {
   state = {

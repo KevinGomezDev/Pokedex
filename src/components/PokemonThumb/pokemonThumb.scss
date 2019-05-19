@@ -1,0 +1,21 @@
+.pokemon {
+  border: 1px solid #ecf0f1;
+  height: 200px;
+  padding: 0;
+  text-align: center;
+  list-style: none;
+  width: 33.33%;
+}
+
+.pokemon-link {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.pokemon-link:hover {
+  text-decoration: none;
+}

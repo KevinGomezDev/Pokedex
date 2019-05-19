@@ -1,4 +1,5 @@
 import React from 'react';
+import './searchBar.scss';
 
 function SearchBar (props) {
   return <div className="nes-container with-title search-container">
@@ -9,4 +10,4 @@ function SearchBar (props) {
   </div>
 }
 
-export default SearchBar
+export default SearchBar;

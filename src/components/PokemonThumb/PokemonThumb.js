@@ -1,6 +1,9 @@
 import React from 'react';
-import TypeBadge from './TypeBadge'
-import { Link } from 'react-router-dom'
+
+import './pokemonThumb.scss';
+
+import TypeBadge from '../TypeBadge/TypeBadge';
+import { Link } from 'react-router-dom';
 
 /* 
   Both local and remote sprites are supported

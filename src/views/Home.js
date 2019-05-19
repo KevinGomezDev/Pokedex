@@ -1,7 +1,7 @@
 import React from 'react';
 
-import PokemonList from '../components/PokemonList';
-import SearchBar from '../components/SearchBar';
+import PokemonList from '../components/PokemonList/PokemonList';
+import SearchBar from '../components/SearchBar/SearchBar';
 
 function filterPokemons (pokemons, searchTerm) {
   const regex = new RegExp(`^${searchTerm}`);

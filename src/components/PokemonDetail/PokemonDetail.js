@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import './pokemonDetail.scss';
 
 function PokemonDetail({ id, height, weight, moves }) {
   return <div className='pokemon-detail'>
@@ -12,4 +13,4 @@ function PokemonDetail({ id, height, weight, moves }) {
   </div>
 }
 
-export default PokemonDetail
+export default PokemonDetail;
