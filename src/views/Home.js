@@ -1,6 +1,6 @@
 import React from 'react';
 
-import PokeList from '../components/PokeList';
+import PokemonList from '../components/PokemonList';
 import SearchBar from '../components/SearchBar';
 
 const massage = {
@@ -29,7 +29,7 @@ class Home extends React.Component {
 
   render() {
     return <React.Fragment>
-      <PokeList pokemons={this.state.pokemons} />
+      <PokemonList pokemons={this.state.pokemons} />
       <SearchBar />
     </React.Fragment>
   }
