@@ -1,14 +1,11 @@
 import React from 'react';
-import { Route, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+
+import Routes from '../../Routes/routes';
 
 import './mainLayout.scss';
 import 'nes.css/scss/nes.scss';
 import control from '../../assets/game-control.png';
-
-import Home from '../../containers/Home';
-import Login from '../../containers/Login';
-import Pokemon from '../../views/Pokemon';
-import SignUp from '../../containers/SignUp';
 
 function MainLayout () {
   return <div className='pokedex'>
@@ -26,10 +23,7 @@ function MainLayout () {
       </div>
     </div>
     <div className='pokedex-content'>
-      <Route exact path="/" component={Home} />
-      <Route exact path="/login" component={Login} />
-      <Route exact path="/sign-up" component={SignUp} />
-      <Route exact path="/pokemon/:id" component={Pokemon} />
+      <Routes />
     </div>
   </div>
 }
