@@ -49,13 +49,17 @@
   width: 33.33%;
 }
 
-.pokemon li {
+.pokemon-link {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   height: 100%;
   width: 100%;
+}
+
+.pokemon-link:hover {
+  text-decoration: none;
 }
 
 .poke-list {

@@ -1,19 +1,20 @@
 import React from 'react';
 import TypeBadge from './TypeBadge'
+import { Link } from 'react-router-dom'
 
 /* 
-  Both local and remote sprites can be used 
+  Both local and remote sprites are supported
   local: `${process.env.PUBLIC_URL}/assets/sprites/model/${id}.png` -> https://github.com/PokeAPI/sprites
   remote: props.image
 */
 
-function Pokemon ({ name, types, image }) {
+function Pokemon ({ id, name, types, image }) {
   return <ul className='pokemon'>
-    <li>
+    <Link className='pokemon-link' to={`/pokemon/${id}`}>
       <img alt={name} src={image} />
       <span>{name}</span>
       {types.map((type) => <TypeBadge type={type.type.name} />)}
-    </li>
+    </Link>
   </ul>
 }
 

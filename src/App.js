@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
 
 import './App.css';
 import 'nes.css/scss/nes.scss';
@@ -15,16 +15,16 @@ function App() {
         <div className='pokedex-menu'>
           <ul>
           <li>
-            <Link to="/">Home</Link>
+            <NavLink to="/">Home</NavLink>
           </li>
           <li>
-            <Link to="/login">Login</Link>
+            <NavLink to="/login">Login</NavLink>
           </li>
           <li>
-            <Link to="/sign-up">Sign-Up</Link>
+            <NavLink to="/sign-up">Sign-Up</NavLink>
           </li>
           <li>
-            <Link to="/pokemon">Pokemon</Link>
+            <NavLink to="/pokemon">Pokemon</NavLink>
           </li>
         </ul>
         </div>
