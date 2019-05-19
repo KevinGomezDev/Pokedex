@@ -6,6 +6,7 @@ import 'nes.css/scss/nes.scss';
 
 import Home from './views/Home';
 import Login from './views/Login';
+import Pokemon from './views/Pokemon';
 import SignUp from './views/SignUp';
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
       <Route exact path="/" component={Home} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/sign-up" component={SignUp} />
+        <Route exact path="/pokemon/:id" component={Pokemon} />
       </div>
   </div>
   </Router>

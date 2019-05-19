@@ -1,5 +1,5 @@
 import React from 'react';
-import Pokemon from './Pokemon';
+import Pokemon from './PokemonThumb';
 
 function PokemonList ({ pokemons }) {
   return <div className='poke-list'>

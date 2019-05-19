@@ -13,7 +13,7 @@ function Pokemon ({ id, name, types, image }) {
     <Link className='pokemon-link' to={`/pokemon/${id}`}>
       <img alt={name} src={image} />
       <span>{name}</span>
-      {types.map((type) => <TypeBadge type={type.type.name} />)}
+      {types.map((type) => <TypeBadge key={type.type.name} type={type.type.name} />)}
     </Link>
   </ul>
 }
