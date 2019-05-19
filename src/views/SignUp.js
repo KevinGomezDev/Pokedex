@@ -44,6 +44,11 @@ class SignUp extends React.Component {
     if(!!pokemonMaster) {
       alert(`Your email is already registered`);
     } else {
+      this.props.createUser({
+        name: this.state.fullName,
+        email: this.state.email,
+        password: this.state.password,
+      })
       this.props.history.push('/login');
     }
   }

@@ -10,7 +10,7 @@ import 'nes.css/scss/nes.scss';
 import Home from './containers/Home';
 import Login from './containers/Login';
 import Pokemon from './views/Pokemon';
-import SignUp from './views/SignUp';
+import SignUp from './containers/SignUp';
 
 const store = configureStore(initialState);
 

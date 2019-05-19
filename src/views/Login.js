@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import { validateEmail } from '../utils/validators';
-import USERS from '../data/users';
 
 class Login extends React.Component {
   state = {
@@ -30,13 +29,16 @@ class Login extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
+    const { users } = this.props
     const { email, password } = this.state;
-    const pokemonMaster = USERS.find((user) => user.email === email && user.password === password);
-    if(!!pokemonMaster) {
-      this.props.loginUser(pokemonMaster)
-      this.props.history.push('/');
-    } else {
-      alert(`Oops, Your user or password is incorrect`);
+    if (users.data.length > 0) {
+      const pokemonMaster = users.data.find((user) => user.email === email && user.password === password);
+      if(!!pokemonMaster) {
+        this.props.loginUser(pokemonMaster)
+        this.props.history.push('/');
+      } else {
+        alert(`Oops, Your user or password is incorrect`);
+      }
     }
   }
 
