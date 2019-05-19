@@ -1,12 +1,16 @@
 import React from 'react';
 
+import { getPokemonsByName, getPokemonsByType } from '../utils/pokemons';
+
 import PokemonList from '../components/PokemonList/';
 import SearchBar from '../components/SearchBar/';
 
 function filterPokemons (pokemons, searchTerm) {
   const regex = new RegExp(`^${searchTerm}`);
   if (pokemons.length > 0) {
-    return pokemons.filter(pokemon => regex.test(pokemon.name));
+    const pokemonsByName = getPokemonsByName(pokemons, regex);
+    const pokemonsByType = getPokemonsByType(pokemons, regex);
+    return [...new Set([...pokemonsByName, ...pokemonsByType ])];
   }
 }
 

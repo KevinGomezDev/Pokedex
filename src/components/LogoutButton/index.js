@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import { logoutUser } from '../../actions/users';
 
 function LogoutButton (props) {
-  console.log(props)
   return !!Object.keys(props.user).length && 
     <button className='nes-btn' onClick={props.logoutUser}>Log-out</button>
 }
