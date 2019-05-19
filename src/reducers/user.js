@@ -6,7 +6,7 @@ export default (state = initialState.user, action) => {
         case LOGIN_USER:
             return { ...state, ...action.payload};
         case LOGOUT_USER:
-            return { ...state, ...action.payload};
+            return {};
         default:
             return state;
     }

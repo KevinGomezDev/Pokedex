@@ -7,15 +7,18 @@ import './mainLayout.scss';
 import 'nes.css/scss/nes.scss';
 import control from '../../assets/game-control.png';
 
+import LogoutButton from '../LogoutButton/';
+
 function MainLayout () {
   return <div className='pokedex'>
     <div className='pokedex-frame'>
       <div className='pokedex-menu'>
         <ul>
-        <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="/login">Login</NavLink></li>
-        <li><NavLink to="/sign-up">Sign-Up</NavLink></li>
-      </ul>
+          <li><NavLink to="/">Home</NavLink></li>
+          <li><NavLink to="/login">Login</NavLink></li>
+          <li><NavLink to="/sign-up">Sign-Up</NavLink></li>
+          <LogoutButton />
+        </ul>
       </div>
       <div className='pokedex-controls'>
         {/*TODO: Draw gameboy controls with css :D!*/}
