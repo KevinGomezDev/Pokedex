@@ -55,6 +55,8 @@ class SignUp extends React.Component {
 
   render() {
     const { fullName, email, password, confirmPassword, isValidEmail, isSamePassword } = this.state;
+    const isReadyToSubmit = ((isValidEmail !== undefined) && isValidEmail) && ((isSamePassword !== undefined) && isSamePassword)
+    //TODO: Refactor, This class implementation is just Ugly
     const emailClassName = (isValidEmail !== undefined)
       ? isValidEmail 
         ? 'is-success' 
@@ -85,7 +87,7 @@ class SignUp extends React.Component {
         <input name='confirmPassword' type="password" className={`nes-input ${passwordClassName}`} value={confirmPassword} onChange={this.handleChange} />
       </div>
       <div className='button-container'>
-        <button type="submit" disabled={!isValidEmail} className={`nes-btn ${isValidEmail ? 'is-primary' : 'is-disabled'}`}>Confirm</button>
+        <button type="submit" disabled={!isReadyToSubmit} className={`nes-btn ${isReadyToSubmit ? 'is-primary' : 'is-disabled'}`}>Confirm</button>
         <Link className="nes-btn" to='/login'>Cancel</Link>
       </div>
       </form>
