@@ -1,5 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import configureStore from './store/configureStore';
+import initialState from './reducers/initialState';
 
 import './App.css';
 import 'nes.css/scss/nes.scss';
@@ -9,8 +12,11 @@ import Login from './views/Login';
 import Pokemon from './views/Pokemon';
 import SignUp from './views/SignUp';
 
+const store = configureStore(initialState);
+
 function App() {
-  return <Router> 
+  return  <Provider store={store}>
+    <Router> 
     <div className='pokedex'>
       <div className='pokedex-frame'>
         <div className='pokedex-menu'>
@@ -39,6 +45,7 @@ function App() {
       </div>
   </div>
   </Router>
+  </Provider>
 }
 
 export default App;
