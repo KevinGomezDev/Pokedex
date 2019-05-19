@@ -33,7 +33,8 @@ class Login extends React.Component {
     const { email, password } = this.state;
     const pokemonMaster = USERS.find((user) => user.email === email && user.password === password);
     if(!!pokemonMaster) {
-      alert(`Welcome back ${pokemonMaster.name}`);
+      this.props.loginUser(pokemonMaster)
+      this.props.history.push('/');
     } else {
       alert(`Oops, Your user or password is incorrect`);
     }

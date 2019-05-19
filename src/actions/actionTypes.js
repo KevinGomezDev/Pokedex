@@ -7,3 +7,5 @@ export const RCV_POKEMONS = 'RCV_POKEMONS';
 export const ERR_POKEMONS = 'ERR_POKEMONS';
 
 export const ADD_USER = 'ADD_USER';
+export const LOGIN_USER = 'LOGIN_USER';
+export const LOGOUT_USER = 'LOGOUT_USER';

@@ -9,6 +9,11 @@ const USERS = [
     'email': 'misty@pokemon.com',
     'password': 'CeruleanCity123*',
   },
+  {
+    'name': 'Misty',
+    'email': 'tester@tester.com',
+    'password': 'tester123*',
+  }
 ];
 
 export default USERS;

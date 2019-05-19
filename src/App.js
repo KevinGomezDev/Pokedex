@@ -8,7 +8,7 @@ import './App.css';
 import 'nes.css/scss/nes.scss';
 
 import Home from './containers/Home';
-import Login from './views/Login';
+import Login from './containers/Login';
 import Pokemon from './views/Pokemon';
 import SignUp from './views/SignUp';
 
