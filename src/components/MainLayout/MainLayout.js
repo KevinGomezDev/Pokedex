@@ -1,13 +1,13 @@
 import React from 'react';
 import { Route, NavLink } from 'react-router-dom';
 
-import '../App.css';
+import './mainLayout.scss';
 import 'nes.css/scss/nes.scss';
 
-import Home from '../containers/Home';
-import Login from '../containers/Login';
-import Pokemon from '../views/Pokemon';
-import SignUp from '../containers/SignUp';
+import Home from '../../containers/Home';
+import Login from '../../containers/Login';
+import Pokemon from '../../views/Pokemon';
+import SignUp from '../../containers/SignUp';
 
 function MainLayout () {
   return <div className='pokedex'>
