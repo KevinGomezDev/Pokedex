@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
+import PrivateRoute from '../enhancers/PrivateRoute';
 
 import Home from '../containers/Home';
 import Login from '../containers/Login';
@@ -8,10 +9,10 @@ import SignUp from '../containers/SignUp';
 
 function Routes () {
   return <React.Fragment>
-    <Route exact path="/" component={Home} />
+    <PrivateRoute exact path="/" component={Home} />
     <Route exact path="/login" component={Login} />
     <Route exact path="/sign-up" component={SignUp} />
-    <Route exact path="/pokemon/:id" component={Pokemon} />
+    <PrivateRoute exact path="/pokemon/:id" component={Pokemon} />
   </React.Fragment>
 }
 
