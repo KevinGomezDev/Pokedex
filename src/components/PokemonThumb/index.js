@@ -2,7 +2,7 @@ import React from 'react';
 
 import './pokemonThumb.scss';
 
-import TypeBadge from '../TypeBadge/TypeBadge';
+import TypeBadge from '../TypeBadge/';
 import { Link } from 'react-router-dom';
 
 /* 

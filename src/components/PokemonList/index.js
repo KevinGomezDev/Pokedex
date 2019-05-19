@@ -1,5 +1,5 @@
 import React from 'react';
-import Pokemon from '../PokemonThumb/PokemonThumb';
+import Pokemon from '../PokemonThumb/';
 
 import './pokemonList.scss';
 
