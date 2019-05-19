@@ -1,12 +1,18 @@
 import React from 'react';
+import TypeBadge from './TypeBadge'
 
-/* PokeAPI Doesn't support Sprites anymore so let's use them locally 
-from PokeApi-Sprites package https://github.com/PokeAPI/sprites */
-function Pokemon ({ id, name }) {
+/* 
+  Both local and remote sprites can be used 
+  local: `${process.env.PUBLIC_URL}/assets/sprites/model/${id}.png` -> https://github.com/PokeAPI/sprites
+  remote: props.image
+*/
+
+function Pokemon ({ name, types, image }) {
   return <ul className='pokemon'>
     <li>
-      <img alt={name} src={`${process.env.PUBLIC_URL}/assets/sprites/model/${id}.png`} />
+      <img alt={name} src={image} />
       <span>{name}</span>
+      {types.map((type) => <TypeBadge type={type.type.name} />)}
     </li>
   </ul>
 }

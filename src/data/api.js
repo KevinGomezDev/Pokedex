@@ -5,6 +5,7 @@ const LIMIT_REQUEST = 50
 const massage = {
   pokemon: (pokemon) => ({
     id: pokemon.id,
+    image: pokemon.sprites.front_default,
     height: pokemon.height,
     name: pokemon.name,
     moves: pokemon.moves,
