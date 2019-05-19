@@ -3,6 +3,7 @@ import { Route, NavLink } from 'react-router-dom';
 
 import './mainLayout.scss';
 import 'nes.css/scss/nes.scss';
+import control from '../../assets/game-control.png';
 
 import Home from '../../containers/Home';
 import Login from '../../containers/Login';
@@ -19,7 +20,10 @@ function MainLayout () {
         <li><NavLink to="/sign-up">Sign-Up</NavLink></li>
       </ul>
       </div>
-      <div className='pokedex-controls'>Controls</div>
+      <div className='pokedex-controls'>
+        {/*TODO: Draw gameboy controls with css :D!*/}
+        <img alt='Control' src={control} style={{ width: '300px' }} />
+      </div>
     </div>
     <div className='pokedex-content'>
       <Route exact path="/" component={Home} />
