@@ -17,10 +17,16 @@ class Pokemon extends React.Component {
   
   render() {
     const { pokemon } = this.state
-    return !!pokemon && <div className='pokemon-container'>
+    return !!pokemon && <React.Fragment>
+    <h1 className='capitalize center'>{`${pokemon.name}`} Details</h1>
+    <div className='pokemon-detail-container'>
       <PokemonThumb { ...pokemon } />
       <PokemonDetail {...pokemon} />
     </div>
+    <div>
+      EVOLUTION CONTAINER
+    </div>
+    </React.Fragment>
   }
 }
 

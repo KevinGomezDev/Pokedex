@@ -1,14 +1,23 @@
-.moves-list {
-  overflow-y: scroll;
-  height: 100px;
-}
-
 .pokemon-detail {
-  border: 1px solid #ecf0f1;
+  background-color: whitesmoke;
+  font-size: 12px;
+  padding: 1em;
   height: 200px;
   width: 100%;
+  span {
+    color: #d35400;
+  }
 }
 
-.pokemon-detail span{
-  color: #d35400;
+.moves-list {
+  display: flex;
+  font-size: 10px;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+  margin-top: 5px;
+  height: 100px;
+  width: 100%;
+  li {
+    width: 50%;
+  }
 }
