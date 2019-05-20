@@ -12,13 +12,13 @@ import { Link } from 'react-router-dom';
 */
 
 function Pokemon ({ id, name, types, image }) {
-  return <ul className='pokemon'>
+  return <div className='pokemon'>
     <Link className='pokemon-link' to={`/pokemon/${id}`}>
       <img alt={name} src={image} />
       <span>{name}</span>
       {types.map((type) => <TypeBadge key={type.type.name} type={type.type.name} />)}
     </Link>
-  </ul>
+  </div>
 }
 
 export default Pokemon;

@@ -1,3 +1,5 @@
+$break-small: 920px;
+
 .pokemon {
   border: 1px solid #ecf0f1;
   background: #fff;
@@ -6,6 +8,9 @@
   text-align: center;
   list-style: none;
   width: 33.33%;
+  @media screen and (max-width: $break-small) {
+    width: 100%;
+  }
 }
 
 .pokemon-link {
